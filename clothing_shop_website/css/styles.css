@@ -1,0 +1,8 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+header { background-color: #333; color: white; padding: 1em; }
+nav ul { list-style: none; display: flex; gap: 1em; }
+nav a { color: white; text-decoration: none; }
+.hero { background-color: #eee; padding: 4em; text-align: center; }
+.featured-products { padding: 2em; }
+.product-grid { display: flex; gap: 2em; flex-wrap: wrap; }
+.product { border: 1px solid #ccc; padding: 1em; width: 200px; text-align: center; }
