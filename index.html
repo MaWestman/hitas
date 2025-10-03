@@ -1,47 +1,43 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hit! Mysen</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <title>FashionMVP</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Hit! Mysen</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Hjem</a></li>
-        <li><a href="shop.html">Butikk</a></li>
-        <li><a href="cart.html">Handlekurv</a></li>
-        <li><a href="about.html">Om Oss</a></li>
-        <li><a href="contact.html">Kontakt</a></li>
-        <li><a href="location.html">Lokasjon</a></li>
-      </ul>
-    </nav>
+  <div class="topbar" role="region" aria-label="Announcements">
+    <div class="container">Free shipping over 300 kr · 30-day returns</div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#/" class="logo" aria-label="FashionMVP home">Fashion<span>MVP</span></a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="#/catalog?category=Women">Women</a>
+        <a href="#/catalog?category=Men">Men</a>
+        <a href="#/catalog?category=Kids">Kids</a>
+        <a href="#/catalog?category=Accessories">Accessories</a>
+      </nav>
+      <form id="searchForm" class="search" role="search" aria-label="Site search">
+        <input id="searchInput" type="search" placeholder="Search products" aria-label="Search products" />
+        <button type="submit" aria-label="Search">Search</button>
+      </form>
+      <a href="#/cart" class="cart-link" aria-label="Cart">
+        Cart <span id="cartCount" class="badge">0</span>
+      </a>
+    </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <h2>Velkommen til Hit!</h2>
-      <p>Oppdag de nyeste motetrendene</p>
-    </section>
+  <main id="app" class="container" tabindex="-1"></main>
 
-    <section class="featured-products">
-      <h3>Utvalgte Produkter</h3>
-      <div class="product-grid">
-        <div class="product">
-          <img src="assets/images/skjorte.jpg" alt="Stilig Skjorte" />
-          <h4>Stilig Skjorte</h4>
-          <p>kr 299</p>
-          <button>Legg i handlekurv</button>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Klesbutikk</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> FashionMVP — Minimal E‑commerce Demo</p>
+    </div>
   </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
