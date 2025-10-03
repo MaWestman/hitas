@@ -1,32 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <title>Butikk</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <header>
-    <h1>Shop</h1>
+    <h1>Butikk</h1>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="cart.html">Cart</a></li>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="shop.html">Butikk</a></li>
+        <li><a href="cart.html">Handlekurv</a></li>
+        <li><a href="about.html">Om Oss</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+        <li><a href="location.html">Lokasjon</a></li>
       </ul>
     </nav>
   </header>
+
   <main>
-    <section class="product-grid">
+    <h2>Produkter</h2>
+    <div class="product-grid">
       <div class="product">
-        <img src="assets/images/shirt.jpg" alt="Shirt">
-        <h4>Shirt</h4>
-        <p>$29.99</p>
-        <button onclick="addToCart('Shirt', 29.99)">Add to Cart</button>
+        <img src="assets/images/skjorte.jpg" alt="Skjorte" />
+        <h4>Skjorte</h4>
+        <p>kr 299</p>
+        <button onclick="addToCart('Skjorte', 299)">Legg i handlekurv</button>
       </div>
-    </section>
+    </div>
   </main>
-  <script src="js/cart.js"></script>
 </body>
+<script src="js/cart.js"></script>
 </html>

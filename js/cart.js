@@ -1,10 +1,12 @@
+// Enkel handlekurv-funksjonalitet
 function addToCart(name, price) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   cart.push({ name, price });
   localStorage.setItem('cart', JSON.stringify(cart));
+  alert(name + " er lagt til i handlekurven.");
 }
 
-window.onload = function() {
+window.onload = function () {
   const cartItems = document.getElementById('cart-items');
   const totalPrice = document.getElementById('total-price');
   if (cartItems && totalPrice) {
@@ -12,9 +14,11 @@ window.onload = function() {
     let total = 0;
     cartItems.innerHTML = '';
     cart.forEach(item => {
-      cartItems.innerHTML += `<p>${item.name} - $${item.price.toFixed(2)}</p>`;
+      const li = document.createElement('li');
+      li.textContent = item.name + " - kr " + item.price;
+      cartItems.appendChild(li);
       total += item.price;
     });
-    totalPrice.textContent = total.toFixed(2);
+    totalPrice.textContent = "Total: kr " + total;
   }
 };
